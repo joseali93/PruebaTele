@@ -1,0 +1,2 @@
+{"_id":{"$oid":"5e83c9bc2df64ffc16ed90c2"},"name":"jose","identification":"1212312","start_date":"2020-03-01T05:00:00.000Z","start_hour":"03:23","end_date":"2020-03-07T05:00:00.000Z","end_hour":"03:04","extra_start_hour":"09:09","reason":"ppor que si","__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5e83cc44d679da00c40a0f9d"},"name":"alirio rojas","identification":"321","start_date":"2020-03-01T05:00:00.000Z","start_hour":"12:03","end_date":"2020-03-06T05:00:00.000Z","end_hour":"23:04","extra_start_hour":"23:04","extra_end_hour":"03:04","reason":"jose","__v":{"$numberInt":"0"}}
