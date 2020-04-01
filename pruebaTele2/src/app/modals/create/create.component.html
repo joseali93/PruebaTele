@@ -1,0 +1,53 @@
+<h1 mat-dialog-title>Crear Registro</h1>
+<div mat-dialog-content>
+    <form [formGroup]="formCreate" (ngSubmit)="update(formCreate)">
+        <mat-form-field>
+            <mat-label>Documento de identificación</mat-label>
+            <input matInput formControlName="identification">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Nombre y Apellido</mat-label>
+            <input matInput formControlName="name">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Fecha de inicio</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="start_date">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <div>
+            <mat-label>Hora de inicio</mat-label>
+            <ngx-timepicker-field formControlName="start_hour" [format]="24" [controlOnly]="true">
+            </ngx-timepicker-field>
+        </div>
+        <mat-form-field>
+            <mat-label>Fecha de fin</mat-label>
+            <input matInput [matDatepicker]="picker2" formControlName="end_date">
+            <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+            <mat-datepicker #picker2></mat-datepicker>
+        </mat-form-field>
+        <div>
+            <mat-label>Hora de fin</mat-label>
+            <ngx-timepicker-field formControlName="end_hour" [format]="24" [controlOnly]="true"></ngx-timepicker-field>
+        </div>
+        <div>
+            <mat-label>Hora extra inicio</mat-label>
+            <ngx-timepicker-field formControlName="extra_start_hour" [format]="24" [controlOnly]="true">
+            </ngx-timepicker-field>
+        </div>
+        <div>
+            <mat-label>Hora extra fin</mat-label>
+            <ngx-timepicker-field formControlName="extra_end_hour" [format]="24" [controlOnly]="true">
+            </ngx-timepicker-field>
+        </div>
+        <mat-form-field class="example-full-width">
+            <mat-label>Motivo horas extra</mat-label>
+            <textarea formControlName="reason" matInput placeholder="Ex. It makes me feel..."></textarea>
+        </mat-form-field>
+    </form>
+
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">No Thanks</button>
+    <button mat-button (click)="update(formCreate)" cdkFocusInitial>Ok</button>
+</div>
